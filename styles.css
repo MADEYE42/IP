@@ -1,3 +1,4 @@
+/* Reset default styles */
 * {
     margin: 0;
     padding: 0;
@@ -5,102 +6,90 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    font-family: 'Poppins', sans-serif;
     background-color: #f0f2f5;
-    margin: 0;
-}
-
-/* Form Container */
-form {
-    width: 100%;
-    max-width: 500px;
-    margin: 20px auto;
-    padding: 30px;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    color: #333;
+    line-height: 1.6;
 }
 
 h1 {
-    margin-bottom: 20px;
-    font-size: 24px;
-    color: #333;
+    text-align: center;
+    margin-top: 20px;
+    color: #4CAF50;
+    font-size: 2.5em;
 }
 
-/* Form Fields */
+/* Center form on the page */
+form {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 label {
-    font-size: 16px;
-    margin-bottom: 5px;
-    color: #555;
     display: block;
-    text-align: left;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
 }
 
 input, select, textarea {
     width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ddd;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 1em;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease;
 }
 
-/* File Input Custom Style */
-input[type="file"] {
-    border: none;
+input:focus, select:focus, textarea:focus {
+    background-color: #e9f5e9;
+    border-color: #4CAF50;
+    outline: none;
 }
 
 textarea {
+    height: 100px;
     resize: none;
 }
 
-input[type="radio"] {
-    width: auto;
-    margin: 0 5px;
-}
-
-/* Submit Button */
 button {
+    display: inline-block;
     width: 100%;
     padding: 15px;
-    background-color: #007bff;
+    background-color: #4CAF50;
     color: white;
     border: none;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 1.2em;
     cursor: pointer;
-    margin-top: 20px;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #45a049;
 }
 
-/* Responsive Design */
-@media only screen and (max-width: 600px) {
-    form {
-        width: 100%;
-        padding: 20px;
-    }
+#downloadProfile {
+    margin-top: 20px;
 }
 
-/* Profile Section Styling */
+/* Profile Display Styling */
 #generatedProfile {
     max-width: 600px;
     margin: 20px auto;
-    padding: 30px;
-    background-color: #ffffff;
+    padding: 20px;
+    background-color: white;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
-/* Profile Picture */
 #generatedProfile img {
     border-radius: 50%;
     width: 150px;
@@ -109,41 +98,47 @@ button:hover {
     margin-bottom: 20px;
 }
 
-/* Profile Text */
 #generatedProfile h2 {
-    font-size: 24px;
-    color: #333;
     margin-bottom: 10px;
+    font-size: 1.8em;
+    color: #4CAF50;
 }
 
 #generatedProfile p {
-    font-size: 16px;
-    color: #555;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+    font-size: 1.1em;
 }
 
 /* Social Media Icons */
 #generatedProfile a {
     display: inline-block;
-    margin: 5px;
+    margin: 10px;
+    font-size: 1.5em;
     text-decoration: none;
-    font-size: 16px;
-    color: #007bff;
+    color: #555;
 }
 
 #generatedProfile a:hover {
-    color: #0056b3;
+    color: #4CAF50;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 600px) {
+    form, #generatedProfile {
+        width: 100%;
+        padding: 20px;
+    }
 }
 
 /* Themes */
 .light-theme {
     background-color: #ffffff;
-    color: #000000;
+    color: #333333;
 }
 
 .dark-theme {
-    background-color: #333333;
-    color: #ffffff;
+    background-color: #2c2c2c;
+    color: #f1f1f1;
 }
 
 .professional-theme {
