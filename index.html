@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Generate Your Profile Page</h1>
+    <form id="profileForm">
+        <!-- Full Name -->
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" name="fullName" required><br>
+
+        <!-- Profile Picture -->
+        <label for="profilePic">Profile Picture:</label>
+        <input type="file" id="profilePic" name="profilePic" accept="image/*" required><br>
+
+        <!-- Email Address -->
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <!-- Phone Number -->
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required><br>
+
+        <!-- Bio/Description -->
+        <label for="bio">Bio/Description:</label>
+        <textarea id="bio" name="bio"></textarea><br>
+
+        <!-- Date of Birth -->
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob"><br>
+
+        <!-- Skills -->
+        <label for="skills">Skills:</label>
+        <select id="skills" name="skills" multiple>
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="js">JavaScript</option>
+            <option value="python">Python</option>
+        </select><br>
+
+        <!-- Gender -->
+        <label>Gender:</label>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Other</label><br>
+
+        <!-- Theme -->
+        <label for="theme">Select Theme:</label>
+        <select id="theme" name="theme">
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+            <option value="professional">Professional</option>
+            <option value="creative">Creative</option>
+        </select><br>
+
+        <!-- Social Media -->
+        <label for="linkedin">LinkedIn:</label>
+        <input type="url" id="linkedin" name="linkedin"><br>
+
+        <label for="github">GitHub:</label>
+        <input type="url" id="github" name="github"><br>
+
+        <label for="twitter">Twitter:</label>
+        <input type="url" id="twitter" name="twitter"><br>
+
+        <!-- Submit Button -->
+        <button type="submit">Generate Profile</button>
+    </form>
+
+    <!-- Profile Section (Will be dynamically generated) -->
+    <div id="generatedProfile"></div>
+
+    <button id="downloadProfile">Download Profile</button>
+    <script src="script.js"></script>
+</body>
+</html>
